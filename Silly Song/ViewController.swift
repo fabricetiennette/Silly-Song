@@ -62,6 +62,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         nameField.delegate = self
         lyricsView.isHidden = true
+        nameField.becomeFirstResponder()
     }
 
     @IBAction func reset(_ sender: Any) {
