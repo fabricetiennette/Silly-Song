@@ -61,14 +61,17 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         nameField.delegate = self
+        lyricsView.isHidden = true
     }
 
     @IBAction func reset(_ sender: Any) {
         nameField.text = ""
         lyricsView.text = ""
+        lyricsView.isHidden = true
     }
     @IBAction func displayLyrics(_ sender: Any) {
         let name = nameField.text
         lyricsView.text = lyricsForName(lyricsTemplate: bananaFanaTemplate, fullName: name!)
+        lyricsView.isHidden = false
     }
 }
